@@ -9,6 +9,7 @@ ramips_setup_interfaces()
 
 	case $board in
 	alfa-network,awusfree1|\
+	creality,wb-01|\
 	d-team,pbr-d1|\
 	dlink,dap-1325-a1|\
 	glinet,microuter-n300|\
@@ -218,6 +219,7 @@ ramips_setup_macs()
 		lan_mac=$(mtd_get_mac_binary factory 0xe000)
 		wan_mac=$(macaddr_add "$lan_mac" 1)
                 ;;
+	creality,wb-01|\
 	cudy,wr1000|\
 	hilink,hlk-7628n|\
 	hilink,hlk-7688a|\
